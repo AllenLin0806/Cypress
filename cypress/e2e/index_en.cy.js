@@ -510,7 +510,7 @@ describe('達明機器人官網 <語系:英文> - 【首頁連結測試】', fun
       })
       it('TM Icon', function(){
         cy.visit('https://www.tm-robot.com/en/')
-        cy.get(Control['TM_icon_footer']).click()
+        cy.get(Control['TM_icon_footer']).click({ multiple: true })
         cy.url().should('eq','https://www.tm-robot.com/en/')
       })
       it('Privacy & Cookies Policy', function(){

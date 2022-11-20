@@ -219,93 +219,93 @@ describe('達明機器人官網 <語系:繁中> - 【首頁連結測試】', fun
       })
     })
 
-    context('實例應用圖片', function() {
+    // context('實例應用圖片', function() {
         
-      beforeEach( function() {   
-        if (header == String.empty)
-        { cy.visit('https://www.tm-robot.com/zh-hant/') }
-        else
-        { cy.get(Control["TM_icon_header"]).click() }
-      })
+    //   beforeEach( function() {   
+    //     if (header == String.empty)
+    //     { cy.visit('https://www.tm-robot.com/zh-hant/') }
+    //     else
+    //     { cy.get(Control["TM_icon_header"]).click() }
+    //   })
 
-      it('起司工廠食物包裝與堆棧應用範例', function(){
-        cy.get(Control['AppTag1']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e8%b5%b7%e5%8f%b8%e5%b7%a5%e5%bb%a0%e9%a3%9f%e7%89%a9%e5%8c%85%e8%a3%9d%e8%88%87%e5%a0%86%e6%a3%a7%e6%87%89%e7%94%a8%e7%af%84%e4%be%8b/')
-        header = "Next";
-      })
+    //   it('起司工廠食物包裝與堆棧應用範例', function(){
+    //     cy.get(Control['AppTag1']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e8%b5%b7%e5%8f%b8%e5%b7%a5%e5%bb%a0%e9%a3%9f%e7%89%a9%e5%8c%85%e8%a3%9d%e8%88%87%e5%a0%86%e6%a3%a7%e6%87%89%e7%94%a8%e7%af%84%e4%be%8b/')
+    //     header = "Next";
+    //   })
 
-      it('TM Robot + AMR 應用範例', function(){
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/tm-robot-amr-%e6%87%89%e7%94%a8%e7%af%84%e4%be%8b/')
-      })
+    //   it('TM Robot + AMR 應用範例', function(){
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/tm-robot-amr-%e6%87%89%e7%94%a8%e7%af%84%e4%be%8b/')
+    //   })
 
-      it('工廠自動化: PCB組裝', function(){
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e5%b7%a5%e5%bb%a0%e8%87%aa%e5%8b%95%e5%8c%96-pcb%e7%b5%84%e8%a3%9d/')
-      })
+    //   it('工廠自動化: PCB組裝', function(){
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e5%b7%a5%e5%bb%a0%e8%87%aa%e5%8b%95%e5%8c%96-pcb%e7%b5%84%e8%a3%9d/')
+    //   })
 
-      it('工廠自動化: 螺絲鎖附', function() {
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['AppTag2']).click({force: true})
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e5%b7%a5%e5%bb%a0%e8%87%aa%e5%8b%95%e5%8c%96-%e8%9e%ba%e7%b5%b2%e9%8e%96%e9%99%84/')
-      })
+    //   it('工廠自動化: 螺絲鎖附', function() {
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['AppTag2']).click({force: true})
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e5%b7%a5%e5%bb%a0%e8%87%aa%e5%8b%95%e5%8c%96-%e8%9e%ba%e7%b5%b2%e9%8e%96%e9%99%84/')
+    //   })
 
-      // ---------Click順序怪怪的
-      it('車用零件組裝', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e8%bb%8a%e7%94%a8%e9%9b%b6%e4%bb%b6%e7%b5%84%e8%a3%9d/')
-      })
+    //   // ---------Click順序怪怪的
+    //   it('車用零件組裝', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e8%bb%8a%e7%94%a8%e9%9b%b6%e4%bb%b6%e7%b5%84%e8%a3%9d/')
+    //   })
 
-      it('TM Robot Frying French Fries', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/tm-robot-frying-french-fries/')
-      })
+    //   it('TM Robot Frying French Fries', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/tm-robot-frying-french-fries/')
+    //   })
 
-      it('Cooking Takoyaki with TM Robot', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).click({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/cooking-takoyaki-with-tm-robot/')
-      })
+    //   it('Cooking Takoyaki with TM Robot', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).click({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/cooking-takoyaki-with-tm-robot/')
+    //   })
 
-      it('Food Service and Restaurant Industry Application with TM Robot', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/food-service-and-restaurant-industry-application-with-tm-robot/')
-      })
+    //   it('Food Service and Restaurant Industry Application with TM Robot', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/food-service-and-restaurant-industry-application-with-tm-robot/')
+    //   })
 
-      it('金屬焊接應用', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).click({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e9%87%91%e5%b1%ac%e7%84%8a%e6%8e%a5%e6%87%89%e7%94%a8/')
-      })
+    //   it('金屬焊接應用', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).click({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/%e9%87%91%e5%b1%ac%e7%84%8a%e6%8e%a5%e6%87%89%e7%94%a8/')
+    //   })
 
-      it('Screw Driving with Atlas Copco', function() {
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).click()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).dblclick()
-        cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
-        cy.get(Control['AppTag2']).click()
-        cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/screw-driving-with-atlas-copco/')
-      })
-      // ---------Click順序怪怪的
-    })
+    //   it('Screw Driving with Atlas Copco', function() {
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).click()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick()
+    //     cy.get(Control['IndexApplications_BNext']).dblclick({force: true})
+    //     cy.get(Control['AppTag2']).click()
+    //     cy.url().should('eq', 'https://www.tm-robot.com/zh-hant/application-videoapp/screw-driving-with-atlas-copco/')
+    //   })
+    //   // ---------Click順序怪怪的
+    // })
 
     context('實例應用名稱', function() {
 
@@ -388,7 +388,7 @@ describe('達明機器人官網 <語系:繁中> - 【首頁連結測試】', fun
         })
     })
 
-// -------------------------------------------------------------------------------------- Tim maintain---------------------------------------------------------------------------
+//-------------------------------------------------------------------------------------- Tim maintain---------------------------------------------------------------------------
 
     context('AI Cobot Series picture', () => {
     Control['Wait']
@@ -629,16 +629,19 @@ describe('達明機器人官網 <語系:繁中> - 【首頁連結測試】', fun
 
       
     })
-    it('TM Icon', function(){  
-      cy.visit('https://www.tm-robot.com/zh-hant/')
-      cy.get(Control['TM_icon_footer']).click()
-      cy.url().should('eq','https://www.tm-robot.com/zh-hant/privacy-cookie-policy/')
+    context('TM Icon & Privacy & Cookies Policy', () => {
+      it('TM Icon', function(){  
+        cy.visit('https://www.tm-robot.com/zh-hant/')
+        cy.get(Control['TM_icon_footer']).click({ multiple: true })
+        cy.url().should('eq','https://www.tm-robot.com/zh-hant/')
+      })
+      it('Privacy & Cookies Policy', function(){  
+        cy.visit('https://www.tm-robot.com/zh-hant/')
+        cy.get('.elementor-heading-title > a').click()
+        cy.url().should('eq','https://www.tm-robot.com/zh-hant/privacy-cookie-policy/')
+      })
     })
-    it('Privacy & Cookies Policy', function(){  
-      cy.visit('https://www.tm-robot.com/zh-hant/')
-      cy.get('.elementor-heading-title > a').click()
-      cy.url().should('eq','https://www.tm-robot.com/zh-hant/privacy-cookie-policy/')
-    })
+    
 })
 
 //cypress run --spec "cypress/e2e/index_zh.cy.js"

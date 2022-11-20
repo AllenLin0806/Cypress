@@ -598,10 +598,12 @@ describe('達明機器人官網 <語系:簡中> - 【首頁連結測試】', fun
       //     cy.get(Control['TM_icon_footer']).click()
       //     })
     })
-    it('TM Icon', function(){
-      cy.visit('https://www.tm-robot.com.cn/zh-hans/')
-      cy.get(Control['TM_icon_footer']).click()
-      cy.url().should('eq','https://www.tm-robot.com.cn/zh-hans/')
+    context('TM Icon', () => {
+      it('TM Icon', function(){
+        cy.visit('https://www.tm-robot.com.cn/zh-hans/')
+        cy.get(Control['TM_icon_footer_cn']).click()
+        cy.url().should('eq','https://www.tm-robot.com.cn/zh-hans/')
+      })
     })
 })
 
